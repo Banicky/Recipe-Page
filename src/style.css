@@ -17,9 +17,13 @@
   /* Had to use flex-basis and flex-grow to efficiently handle the spacing 
   within the Nutrition section */
 
+    /* In retrospect, I should've used <table> instead of <div> for the nutrition
+    section */
+
 
 :root {
   background-color: #242424;
+  font-size: 16px;
 }
 
 * {
