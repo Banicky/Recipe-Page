@@ -1,0 +1,102 @@
+/* New things learned */
+  /* Added padding to the body element instead of locking it to have height: 100vh 
+  which I was doing for the past few projects */
+
+  /* I didn't need an outer and inner container to achieve the edge spacing
+  effect, all I needed was to add padding to the inner container since padding
+  does not really affect the contents */
+
+  /* I could use :nth-child(1) function with css selectors to conveniently reference
+  just the first child element */
+
+  /* Made use of <span> for inline text, I don't have to always use <p> */
+
+:root {
+  background-color: #242424;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('../assets/fonts/outfit/Outfit-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'YoungSerif';
+  src: url('../assets/fonts/young-serif/YoungSerif-Regular.ttf');
+}
+
+body {
+  font-family: 'Outfit';
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(30, 54%, 90%);
+  padding: 100px
+}
+
+.outer_container {
+  background-color: hsl(0, 0%, 100%);
+  width: 800px;
+  border-radius: 20px;
+}
+
+.inner_container {
+  margin: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.omelette_pic {
+  border-radius: 15px;
+}
+
+.description {
+  color: hsl(30, 10%, 34%);
+}
+
+.inner_container h1 {
+  font-family: 'YoungSerif';
+  font-weight: 400;
+  color: hsl(24, 5%, 18%);
+}
+
+.prep_section {
+  background-color: hsl(330, 100%, 98%);
+  padding: 27px;
+  border-radius: 15px;
+}
+.prep_section .prep_header {
+  font-size: 20px;
+  color: hsl(332, 51%, 32%);
+  font-weight: 700;
+}
+.prep_section ul {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 22px;
+}
+.prep_section ul li {
+  padding-left: 15px;
+}
+.prep_section ul li span:nth-child(1) {
+  font-weight: 700;
+}
+
+.attribution {
+  font-size: 11px; text-align: center;
+  margin-top: 10px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
