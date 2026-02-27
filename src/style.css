@@ -11,6 +11,9 @@
 
   /* Made use of <span> for inline text, I don't have to always use <p> */
 
+  /* Apparently the indentation of <ul> and <li> elements are just the default
+  padding-left*/
+
 :root {
   background-color: #242424;
 }
@@ -84,11 +87,71 @@ body {
   flex-direction: column;
   gap: 10px;
   padding-left: 22px;
+  color: hsl(30, 10%, 34%);
 }
 .prep_section ul li {
   padding-left: 15px;
 }
 .prep_section ul li span:nth-child(1) {
+  font-weight: 700;
+}
+
+h2 {
+  font-family: 'YoungSerif';
+  font-weight: 400;
+  color: hsl(14, 45%, 36%);
+}
+
+.ingredients_section ul {
+  margin-top: 15px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: hsl(30, 10%, 34%);
+}
+.ingredients_section ul li {
+  padding-left: 15px;
+}
+
+.instruction_section ol {
+  padding-left: 23px;
+  color: hsl(30, 10%, 34%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.instruction_section ol li {
+  padding-left: 11px;
+}
+.instruction_section ol li span:nth-child(1) {
+  font-weight: 700;
+}
+.instruction_section ol li::marker {
+  font-weight: 700;
+}
+
+.nutrition_section h2 {
+  margin-bottom: 25px;
+}
+.macros {
+  margin-top: 25px;
+  /* display: flex;
+  flex-direction: column;
+  gap: 8px; */
+}
+.macros hr {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.macros .left_text {
+  color: hsl(30, 10%, 34%);
+  font-weight: 600;
+  margin-left: 30px;
+  margin-right: 100px;
+}
+.macros .right_text {
+  color: hsl(14, 45%, 36%);
   font-weight: 700;
 }
 
