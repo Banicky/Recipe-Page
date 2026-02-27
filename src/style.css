@@ -4,7 +4,7 @@
 
   /* I didn't need an outer and inner container to achieve the edge spacing
   effect, all I needed was to add padding to the inner container since padding
-  does not really affect the contents */
+  does not really affect the content area */
 
   /* I could use :nth-child(1) function with css selectors to conveniently reference
   just the first child element */
@@ -13,6 +13,10 @@
 
   /* Apparently the indentation of <ul> and <li> elements are just the default
   padding-left*/
+
+  /* Had to use flex-basis and flex-grow to efficiently handle the spacing 
+  within the Nutrition section */
+
 
 :root {
   background-color: #242424;
@@ -44,14 +48,11 @@ body {
   padding: 100px
 }
 
-.outer_container {
+.container {
+  padding: 35px;
   background-color: hsl(0, 0%, 100%);
-  width: 800px;
+  width: 720px;
   border-radius: 20px;
-}
-
-.inner_container {
-  margin: 35px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -65,7 +66,7 @@ body {
   color: hsl(30, 10%, 34%);
 }
 
-.inner_container h1 {
+.container h1 {
   font-family: 'YoungSerif';
   font-weight: 400;
   color: hsl(24, 5%, 18%);
@@ -132,25 +133,27 @@ h2 {
 }
 
 .nutrition_section h2 {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 .macros {
   margin-top: 25px;
-  /* display: flex;
+  display: flex;
   flex-direction: column;
-  gap: 8px; */
+  gap: 8px;
 }
-.macros hr {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-.macros .left_text {
-  color: hsl(30, 10%, 34%);
-  font-weight: 600;
+.macros .info {
+  display: flex;
   margin-left: 30px;
-  margin-right: 100px;
 }
-.macros .right_text {
+.macros .info p:nth-child(1) {
+  flex-basis: 0%;
+  flex-grow: 1;
+  color: hsl(30, 10%, 34%);
+  font-weight: 500;
+}
+.macros .info p:nth-child(2) {
+  flex-basis: 0%;
+  flex-grow: 1;
   color: hsl(14, 45%, 36%);
   font-weight: 700;
 }
